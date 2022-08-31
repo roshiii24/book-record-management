@@ -9,7 +9,7 @@ POST: Create a new user
 
 ## users/{id}
 GET: Get a user by id
-POST: Update a user by id
+PUT: Update a user by id
 DELETE: Delete a user by id (check if he still has an issued book)(is there any fine to be paid)
 
 ## users/subsciption-details/{id}
@@ -26,6 +26,9 @@ POST: Create/ Add a new book
 GET: Get a bok by id
 PUT: Update a book by id
 
+## /books/issued/by-user
+GET: Get all the issued books
+
 ## /books/issues/withFine
 GET: Get all issued books with fine 
 
@@ -33,6 +36,8 @@ GET: Get all issued books with fine
 Basic (3 months)
 Standard (6 months)
 Premium (12 months)
+
+NOTE: Date will be in the format mm/dd/yy
 
 If the subscription date is 01/08/22 and Subscription type is Standard the valid till date will be 01/02/23
 
