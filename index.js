@@ -1,9 +1,15 @@
 const express = require('express');
+const dotenv = require('dotenv');
 
 const usersRouters = require("./routes/users");
 const booksRouters = require("./routes/books");
+const DbConnection = require('./databaseConnection');
+
+dotenv.config();
 
 const app = express();
+
+DbConnection();
 
 const port = 8081;
 
